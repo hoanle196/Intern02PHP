@@ -25,7 +25,7 @@ class Helper
       $to_name = $args['username'];
       $mail->addAddress($to, $to_name); //mail và tên người nhận
       $mail->isHTML(true); // Set email format to HTML
-      $mail->Subject = 'Thư Cấp Lại Mật Khẩu';
+      $mail->Subject = $args['subject'];
       $mail->Body = $args['content'];
       $mail->smtpConnect(array(
         "ssl" => array(

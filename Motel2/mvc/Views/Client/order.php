@@ -23,7 +23,7 @@
       <input type="email" class="form-control" value="<?php echo $_SESSION['login']['email'] ?>" name="Email" disabled placeholder="Email" required="">
       <input type="text" class="form-control" value="<?php echo $_SESSION['login']['address'] ?>" name="Name" disabled placeholder="Name" required="">
       <input type="text" class="form-control" value="<?php echo $_SESSION['login']['phone'] ?>" name="Email" disabled placeholder="Email" required="">
-      <form action="?a=order" method="POST">
+      <form action="?a=order&id=<?php echo $_GET['id'] ?>" method="POST">
         <input type="hidden" value="<?php echo $totalPrice ?> " name="price">
         <input type="hidden" value="<?php echo $bookingId ?> " name="bookingId">
         <div class="text-left"><button type="submit" class="book-now-btn">Order Now</button></div>

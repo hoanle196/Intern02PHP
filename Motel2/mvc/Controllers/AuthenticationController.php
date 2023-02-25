@@ -92,6 +92,7 @@ class AuthenticationController extends Hooks
         'email' => $result['email'],
         'username' => $result['name'],
         'content' => $content,
+        'subject' => 'Thư Cấp Lại Mật Khẩu'
       ];
       if (Helper::sendEmail($args)) {
 
